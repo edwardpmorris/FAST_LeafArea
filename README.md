@@ -2,4 +2,5 @@
 A collection of scripts for processing images of plant structures collected using a simple flatbed scanner. These are just control scripts for automated processing using the R package LeafArea (https://cran.r-project.org/web/packages/LeafArea/index.html).
 
 ## Image processing workflow
-![mindMap_LeafArea.png](mindMap_LeafArea.png)
+![My image](edwardpmorris.github.com/FAST_LeafArea/mindMap_LeafArea.jpg)
+
