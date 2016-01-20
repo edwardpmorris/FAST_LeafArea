@@ -44,14 +44,14 @@ helper.leafarea <- function (set.directory, trim.pixel=0, check.image=F, distanc
   )
   out <- unlist(out$each.image)
   # assumes <file name>.jpeg.txt.Area
-  # make a dataframe of filename and area   
+  # make a dataframe of filename and area [m2]   
   out <- data.frame(file_name = matrix(unlist(strsplit(names(out),".", fixed = T))
                                        ,ncol = 4, byrow = T)[,1]
-                    , projected_surface_area_of_element.cm2 = out
+                    , projected_surface_area_of_element.m2 = out/(100*100)
                     , stringsAsFactors = FALSE)
   # add metadata
   attr(out,"standard.name") <- "projected_surface_area_of_element"
-  attr(out,"units") <- "cm2"
+  attr(out,"units") <- "m2"
   return(out)
 }
 
