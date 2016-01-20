@@ -13,7 +13,7 @@
 #' @param known.distance The distance for which 'distance.pixel' is known
 #' @param path.imagej The path where the imageJ executable is found. For Linux this must be stated.
 #'
-#' @return A dataframe with ?filename? and calculated area (in the specified units)
+#' @return A dataframe with filename and calculated 'projected surface area of element' (m2)
 #' @export
 #'
 #' @examples
@@ -38,8 +38,8 @@ helper.leafarea <- function (set.directory, trim.pixel=0, check.image=F, distanc
     , low.size = 5 # exclude small objects, has to be larger than scale bar (5 cm^2) 
     #, low.circ = 0.1
     , log = TRUE # this gives area for individual files
-    , distance.pixel = 1238 # assume width of image is A4, 21cm, FIXME: make this automatic (look at EXIF?)
-    , known.distance = 21 # assume width of image is A4, 21cm
+    , distance.pixel = distance.pixel # assume width of image is A4, 21cm, FIXME: make this automatic (look at EXIF?)
+    , known.distance = known.distance # assume width of image is A4, 21cm
     , check.image = check.image
   )
   out <- unlist(out$each.image)
