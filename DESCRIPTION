@@ -1,0 +1,18 @@
+Package: FASTLeafArea
+Title: Use ImageJ to derive leaf surface area from scanned images
+Version: 0.0.0.9000
+Authors@R: person("Edward P.", "Morris", email = "edward.morris@uca.es", role = c("aut", "cre"))
+URL: http://fast-space-project.eu
+BugReports: https://github.com/edwardpmorris/FAST_LeafArea/issues
+Description: Provides a simple wrapper including FAST project specific options
+    and settings to \pckg{LeafArea}, which interfaces with the Java image processing
+    program ImageJ (\url{http://rsb.info.nih.gov/ij/}). ImageJ must be installed
+    seperately, preferably by downloading and extracting the 'standalone' ImageJ
+    package. ImageJ2 is not supported.
+Depends:
+    R (>= 3.2.3)
+License: GPL-3
+LazyData: true
+Imports:
+    LeafArea
+RoxygenNote: 5.0.1
